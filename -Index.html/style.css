@@ -1,0 +1,86 @@
+/* 1. LO GENERAL (Fondo oscuro y letra limpia) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body {
+    background-color: #0c0c12;
+    color: #ffffff;
+}
+
+/* 2. EL MENÚ DE ARRIBA */
+.header-jujutsu {
+    background-color: #161622;
+    border-bottom: 2px solid #4a148c; /* Línea morada */
+}
+.nav-jujutsu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.menu-enlaces {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+.menu-enlaces a {
+    text-decoration: none;
+    color: #00e5ff; /* Azul brillante */
+    font-weight: bold;
+}
+
+/* 3. LAS SECCIONES DE TEXTO (Inicio, Autor y Trama) */
+.hero-jujutsu, .seccion-autor, .seccion-trama {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 25px;
+    background-color: #161622; /* Todas usan el mismo fondo gris oscuro */
+    border-radius: 8px;
+    text-align: center;
+}
+h1, h2 {
+    color: #ff1744; /* Títulos en rojo */
+    margin-bottom: 15px;
+}
+p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #cccccc;
+}
+.enlace-externo, .boton-maldito {
+    color: #00e5ff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* 4. LAS TARJETAS DE PERSONAJES Y FOOTER */
+.contenedor-tarjetas {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 30px 0;
+}
+.tarjeta-pj {
+    background-color: #161622;
+    width: 250px;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #2a2a40;
+}
+.imagen-box img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+.footer-jujutsu {
+    text-align: center;
+    padding: 20px;
+    color: #777;
+}

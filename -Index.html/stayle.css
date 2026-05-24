@@ -1,0 +1,89 @@
+/* Configuraciones generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f7f6;
+    color: #2c3e50;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* HEADER: Estilos del encabezado con el verde temático */
+.site-header {
+    background-color: #7be2c7; /* Verde oliva/menta icónico del anime */
+    color: #ffffff;
+    text-align: center;
+    padding: 2.5rem 1rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.site-header h1 {
+    font-size: 2.8rem;
+    letter-spacing: 3px;
+    margin-bottom: 0.5rem;
+}
+
+/* BODY: Espaciado y diseño del contenido central */
+.site-body {
+    flex: 1; /* Esto empuja el footer hacia abajo si hay poco texto */
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+.intro-section, .cta-section {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.site-body h2, .site-body h3 {
+    color: #1a252f;
+    margin-bottom: 1rem;
+}
+
+.site-body p {
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+/* BOTÓN: Estilo personalizado inspirado en Crunchyroll (Naranja) */
+.crunchy-button {
+    display: inline-block;
+    background-color: #f47521; /* Naranja Crunchyroll */
+    color: #ffffff;
+    padding: 0.8rem 2rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(244, 117, 33, 0.3);
+}
+
+/* Efecto hover al pasar el cursor sobre el botón */
+.crunchy-button:hover {
+    background-color: #ff8533;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(244, 117, 33, 0.4);
+}
+
+/* FOOTER: Estilos del pie de página */
+.site-footer {
+    background-color: #1a252f; /* Fondo oscuro elegante */
+    color: #bdc3c7;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    font-size: 0.9rem;
+}
+
+.site-footer p {
+    margin-bottom: 0.3rem;
+}

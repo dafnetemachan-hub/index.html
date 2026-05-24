@@ -1,0 +1,279 @@
+/* ==========================================================================
+   1. RESETEO Y CONFIGURACIÓN ESTILO WIKIPEDIA
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 70px; /* Evita que el menú tape los títulos al saltar */
+}
+
+body {
+    background-color: #ffffff; /* Fondo Blanco */
+    color: #202122;            /* Texto oscuro oficial de Wikipedia */
+    font-family: 'Linux Libertine', 'Georgia', 'Times New Roman', serif; /* Tipografía de artículo formal */
+    line-height: 1.6;
+    padding-top: 60px;         /* Espacio libre para el menú superior */
+}
+
+/* ==========================================================================
+   2. BARRA DE NAVEGACIÓN (MENÚ PERMANENTE)
+   ========================================================================== */
+.header-wiki {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff0f5; /* Rosa Pálido */
+    border-bottom: 3px solid #fbcce3; /* Rosa Pastel */
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.menu-navegacion {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 10px;
+}
+
+.menu-navegacion a {
+    color: #c71585; /* Rosa fuerte tipografía */
+    text-decoration: none;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-weight: bold;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+}
+
+.menu-navegacion a:hover {
+    color: #ff69b4; /* Destello rosa pastel */
+}
+
+/* ==========================================================================
+   3. MAQUETACIÓN E INSPIRACIÓN DE FUENTES DE LA SERIE
+   ========================================================================== */
+.contenedor-wiki {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+/* Títulos llamativos con fuentes sans-serif / geométricas emulando el show */
+.titulo-principal {
+    font-family: 'Trebuchet MS', 'Impact', sans-serif;
+    font-size: 2.8rem;
+    color: #ff6b8b; /* Rosa Llamativo de la serie */
+    border-bottom: 1px solid #a2a9b1; /* Línea divisoria estilo Wiki */
+    padding-bottom: 5px;
+    margin-bottom: 25px;
+    letter-spacing: -1px;
+}
+
+.subtitulo-wiki {
+    font-family: 'Arial Black', sans-serif;
+    font-size: 1.6rem;
+    color: #4a90e2; /* Azul Gema brillante */
+    border-bottom: 1px solid #a2a9b1;
+    margin-top: 35px;
+    margin-bottom: 15px;
+    padding-bottom: 3px;
+}
+
+/* Texto de artículo formal */
+p {
+    margin-bottom: 15px;
+    text-align: justify;
+    font-size: 1.05rem;
+}
+
+/* ==========================================================================
+   4. INTEGRACIÓN DE IMÁGENES FLOTANTES AL LEER
+   ========================================================================== */
+.bloque-contenido {
+    overflow: hidden; /* Limpia los elementos flotantes */
+}
+
+.imagen-flotante {
+    float: right;
+    margin-left: 20px;
+    margin-bottom: 15px;
+    border: 1px solid #a2a9b1;
+    background-color: #f8f9fa;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.logo-su {
+    width: 280px;
+}
+
+/* Lista de personajes con imágenes integradas a la derecha */
+.lista-wiki {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+.item-personaje {
+    margin-bottom: 25px;
+    overflow: hidden;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #e5e5e5;
+}
+
+.imagen-flotante-lista {
+    float: right;
+    width: 120px;
+    height: 70px;
+    object-fit: cover;
+    margin-left: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Estructura para sección Temas con imágenes integradas lateralmente */
+.bloque-contenido-galeria {
+    display: flex;
+    gap: 20px;
+}
+
+.lista-wiki-texto {
+    flex: 2;
+    padding-left: 20px;
+}
+
+.lista-wiki-texto li {
+    margin-bottom: 20px;
+}
+
+.columna-imagenes-lateral {
+    flex: 1;
+    max-width: 250px;
+}
+
+.columna-imagenes-lateral figure {
+    background: #f8f9fa;
+    border: 1px solid #a2a9b1;
+    padding: 4px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+}
+
+.columna-imagenes-lateral img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    display: block;
+}
+
+.columna-imagenes-lateral figcaption {
+    font-size: 0.8rem;
+    color: #54595d;
+    text-align: center;
+    margin-top: 5px;
+    font-family: sans-serif;
+}
+
+/* ==========================================================================
+   5. NUEVO LAYOUT: TARJETAS DE CURIOSIDADES
+   ========================================================================== */
+.contenedor-tarjetas {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.tarjeta-curiosidad {
+    display: flex;
+    background-color: #fff9fb; /* Variación Rosa muy suave */
+    border: 1px solid #fbcce3;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+    transition: transform 0.2s;
+}
+
+.tarjeta-curiosidad:hover {
+    transform: scale(1.01);
+}
+
+.img-tarjeta {
+    width: 200px;
+    height: auto;
+    min-height: 150px;
+    object-fit: cover;
+    background-color: #e2e2e2; /* Color de fondo provisional */
+    border-right: 1px solid #fbcce3;
+}
+
+.tarjeta-texto {
+    padding: 20px;
+    flex: 1;
+}
+
+.tarjeta-texto h3 {
+    font-family: sans-serif;
+    color: #e67e22; /* Color dorado tirando a bronce llamativo */
+    margin-bottom: 8px;
+    font-size: 1.2rem;
+}
+
+/* ==========================================================================
+   6. SECCIÓN DE HIPERVÍNCULOS (NEGRO Y DORADO)
+   ========================================================================== */
+.footer-wiki {
+    background-color: #000000; /* Fondo Negro estricto */
+    color: #ffffff;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 60px;
+    font-family: sans-serif;
+    font-size: 0.9rem;
+    border-top: 4px solid #ba6ab3; /* Borde Dorado Metálico */
+}
+
+.enlaces-finales a {
+    color: #d4af37; /* Hipervínculos Dorados */
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 10px;
+    transition: color 0.2s;
+}
+
+.enlaces-finales a:hover {
+    color: #ffffff; /* Cambia a blanco al pasar el mouse */
+    text-decoration: underline;
+}
+
+/* Adaptación para dispositivos móviles */
+@media (max-width: 768px) {
+    .bloque-contenido-galeria {
+        flex-direction: column-reverse;
+    }
+    .columna-imagenes-lateral {
+        max-width: 100%;
+    }
+    .tarjeta-curiosidad {
+        flex-direction: column;
+    }
+    .img-tarjeta {
+        width: 100%;
+        height: 180px;
+    }
+}
+    /* Tamaño controlado para las imágenes del Mensaje Final */
+.img-mensaje-final {
+    height: 180px;          /* Ajusta este número si las quieres más grandes o más chicas */
+    width: auto;            /* Hace que el ancho se adapte automáticamente para que no se deformen */
+    display: inline-block;  /* Permite que se coloquen una al lado de la otra */
+    margin: 15px 10px 0 0;  /* Espaciado: arriba, derecha, abajo, izquierda */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
